@@ -79,7 +79,7 @@ function VacancyList() {
         if (selectedProv && selectedProv.value) {
           // Fetch vacancies *for selected province*, loop pages
           do {
-            const url = `https://maganghub.kemnaker.go.id/be/v1/api/list/vacancies?angkatan=2&kode_provinsi=${selectedProv.value}&page=${page}&limit=50`;
+            const url = `https://maganghub.kemnaker.go.id/be/v1/api/list/vacancies?angkatan=2&kode_provinsi=${selectedProv.value}&page=${page}`;
             const res = await fetch(url);
             const json = await res.json();
             if (json && Array.isArray(json.data)) {
